@@ -54,7 +54,7 @@
 
 				var geometry = new THREE.IcosahedronBufferGeometry( radius, 2 );
 
-				for ( var i = 0; i < 200; i ++ ) {
+				for ( var i = 0; i < 1; i ++ ) {
 
 					var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
 
@@ -71,7 +71,7 @@
 
 				}
 
-				//
+				
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
@@ -100,11 +100,13 @@
 				controller1 = renderer.vr.getController( 0 );
 				controller1.addEventListener( 'selectstart', onSelectStart );
 				controller1.addEventListener( 'selectend', onSelectEnd );
+				controller1.userData.number = "0";
 				scene.add( controller1 );
 
 				controller2 = renderer.vr.getController( 1 );
 				controller2.addEventListener( 'selectstart', onSelectStart );
 				controller2.addEventListener( 'selectend', onSelectEnd );
+				controller2.userData.number = "1";
 				scene.add( controller2 );
 
 				// helpers
@@ -136,6 +138,7 @@
 			function handleController( controller ) {
 
 				if ( controller.userData.isSelecting ) {
+					console.log("at: " + controller.userData.number)
 
 					var object = room.children[ count ++ ];
 
