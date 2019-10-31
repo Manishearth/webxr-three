@@ -43,7 +43,7 @@
 				document.body.appendChild( container );
 
 				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0x222222 );
+				// scene.background = new THREE.Color( 0x222222 );
 
 				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 50 );
 
@@ -69,18 +69,18 @@
 				scene.add( table );
 				*/
 
-				var geometry = new THREE.PlaneBufferGeometry( 4, 4 );
-				var material = new THREE.MeshStandardMaterial( {
-					color: 0x222222,
-					roughness: 1.0,
-					metalness: 0.0
-				} );
-				var floor = new THREE.Mesh( geometry, material );
-				floor.rotation.x = - Math.PI / 2;
-				floor.receiveShadow = true;
-				scene.add( floor );
+				// var geometry = new THREE.PlaneBufferGeometry( 4, 4 );
+				// var material = new THREE.MeshStandardMaterial( {
+				// 	color: 0x222222,
+				// 	roughness: 1.0,
+				// 	metalness: 0.0
+				// } );
+				// var floor = new THREE.Mesh( geometry, material );
+				// floor.rotation.x = - Math.PI / 2;
+				// floor.receiveShadow = true;
+				// scene.add( floor );
 
-				scene.add( new THREE.GridHelper( 20, 40, 0x111111, 0x111111 ) );
+				// scene.add( new THREE.GridHelper( 20, 40, 0x111111, 0x111111 ) );
 
 				scene.add( new THREE.HemisphereLight( 0x888877, 0x777788 ) );
 
