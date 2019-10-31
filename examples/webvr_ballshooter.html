@@ -37,7 +37,7 @@
 			function init() {
 
 				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0x505050 );
+				// scene.background = new THREE.Color( 0x505050 );
 
 				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, 10 );
 
@@ -54,7 +54,7 @@
 
 				var geometry = new THREE.IcosahedronBufferGeometry( radius, 2 );
 
-				for ( var i = 0; i < 1; i ++ ) {
+				for ( var i = 0; i < 200; i ++ ) {
 
 					var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
 
