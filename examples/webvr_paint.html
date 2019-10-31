@@ -137,35 +137,47 @@
 				controller2.userData.points = [ new THREE.Vector3(), new THREE.Vector3() ];
 				controller2.userData.matrices = [ new THREE.Matrix4(), new THREE.Matrix4() ];
 				scene.add( controller2 );
+				var pivot = new THREE.Mesh( new THREE.IcosahedronBufferGeometry( 0.01, 2 ) );
+				pivot.name = 'pivot';
+				pivot.position.y = - 0.016;
+				pivot.position.z = - 0.043;
+				pivot.rotation.x = Math.PI / 5.5;
+				controller1.add( pivot);
+				var pivot = new THREE.Mesh( new THREE.IcosahedronBufferGeometry( 0.01, 2 ) );
+				pivot.name = 'pivot';
+				pivot.position.y =  - 0.016;
+				pivot.position.z = - 0.043;
+				pivot.rotation.x = Math.PI / 5.5;
+				controller2.add( pivot );
 
-				var loader = new THREE.OBJLoader();
-				loader.setPath( 'models/obj/vive-controller/' );
-				loader.load( 'vr_controller_vive_1_5.obj', function ( object ) {
+				// var loader = new THREE.OBJLoader();
+				// loader.setPath( 'models/obj/vive-controller/' );
+				// loader.load( 'vr_controller_vive_1_5.obj', function ( object ) {
 
-					var loader = new THREE.TextureLoader();
-					loader.setPath( 'models/obj/vive-controller/' );
+				// 	var loader = new THREE.TextureLoader();
+				// 	loader.setPath( 'models/obj/vive-controller/' );
 
-					var controller = object.children[ 0 ];
-					controller.material.map = loader.load( 'onepointfive_texture.png' );
-					controller.material.specularMap = loader.load( 'onepointfive_spec.png' );
-					controller.castShadow = true;
-					controller.receiveShadow = true;
+				// 	var controller = object.children[ 0 ];
+				// 	controller.material.map = loader.load( 'onepointfive_texture.png' );
+				// 	controller.material.specularMap = loader.load( 'onepointfive_spec.png' );
+				// 	controller.castShadow = true;
+				// 	controller.receiveShadow = true;
 
-					// var pivot = new THREE.Group();
-					// var pivot = new THREE.Mesh( new THREE.BoxBufferGeometry( 0.01, 0.01, 0.01 ) );
-					var pivot = new THREE.Mesh( new THREE.IcosahedronBufferGeometry( 0.01, 2 ) );
-					pivot.name = 'pivot';
-					pivot.position.y = - 0.016;
-					pivot.position.z = - 0.043;
-					pivot.rotation.x = Math.PI / 5.5;
-					controller.add( pivot );
+				// 	// var pivot = new THREE.Group();
+				// 	// var pivot = new THREE.Mesh( new THREE.BoxBufferGeometry( 0.01, 0.01, 0.01 ) );
+				// 	var pivot = new THREE.Mesh( new THREE.IcosahedronBufferGeometry( 0.01, 2 ) );
+				// 	pivot.name = 'pivot';
+				// 	pivot.position.y = - 0.016;
+				// 	pivot.position.z = - 0.043;
+				// 	pivot.rotation.x = Math.PI / 5.5;
+				// 	controller.add( pivot );
 
-					controller1.add( controller.clone() );
+				// 	controller1.add( controller.clone() );
 
-					pivot.material = pivot.material.clone();
-					controller2.add( controller.clone() );
+				// 	pivot.material = pivot.material.clone();
+				// 	controller2.add( controller.clone() );
 
-				} );
+				// } );
 
 				//
 
