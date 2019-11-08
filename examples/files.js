@@ -1,4 +1,18 @@
 var files = {
+	"webvr": [
+		"webvr_ballshooter",
+		"webvr_cubes",
+		"webvr_dragging",
+		"webvr_lorenzattractor",
+		"webvr_panorama",
+		"webvr_paint",
+		"webvr_rollercoaster",
+		"webvr_sandbox",
+		"webvr_sculpt",
+		"webvr_video",
+		"webvr_vive_paint",
+		"webvr_vive_sculpt"
+	],
 	"webgl": [
 		"webgl_animation_cloth",
 		"webgl_animation_keyframes",
@@ -329,20 +343,6 @@ var files = {
 		"webaudio_sandbox",
 		"webaudio_timing",
 		"webaudio_visualizer"
-	],
-	"webvr": [
-		"webvr_ballshooter",
-		"webvr_cubes",
-		"webvr_dragging",
-		"webvr_lorenzattractor",
-		"webvr_panorama",
-		"webvr_paint",
-		"webvr_rollercoaster",
-		"webvr_sandbox",
-		"webvr_sculpt",
-		"webvr_video",
-		"webvr_vive_paint",
-		"webvr_vive_sculpt"
 	],
 	"physics": [
 		"webgl_physics_cloth",
